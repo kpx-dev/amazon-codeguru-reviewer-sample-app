@@ -67,7 +67,9 @@ public class EventHandler implements RequestHandler<ScheduledEvent, String> {
         Cipher cipher = Cipher.getInstance("RSA");
         SecretKey secretKey = new SecretKeySpec(key.getBytes(), "AES");
         cipher.init(Cipher.ENCRYPT_MODE, secretKey);
-        return new String(cipher.doFinal(message.getBytes()), StandardCharsets.UTF_8);
+        String test = new String(cipher.doFinal(message.getBytes()), StandardCharsets.UTF_8);
+
+        return test;
     }
 
     public ShopifyShop connectToShopify(String subdomain) {
