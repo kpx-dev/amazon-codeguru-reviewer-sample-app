@@ -41,7 +41,7 @@ jobs:
       if: steps.iam-role.outcome == 'success'
       continue-on-error: false
       with:          
-        s3_bucket: code-guru-demo-34234234324234
+        s3_bucket: codeguru-reviewer-demo-234234sdfsdf
         build_path: ./target/classes
 
     - name: CodeGuru Security
